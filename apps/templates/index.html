@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Emoji Text Generator</title>
+  </head>
+  <body>
+    <h1>Emoji Text Generator</h1>
+    <form action="/generate" method="post">
+      <label for="word">Enter a word:</label>
+      <input type="text" name="word" id="word" required>
+      <br>
+      <label for="emoji">Choose an emoji:</label>
+      <select name="emoji" id="emoji">
+        <option value="🔥">🔥</option>
+        <option value="🌈">🌈</option>
+        <option value="🐶">🐶</option>
+        <option value="😶">😶</option>
+        <!-- Add more emoji options as needed -->
+      </select>
+      <br>
+      <button type="submit">Generate Emoji Text</button>
+    </form>
+  </body>
+</html>
