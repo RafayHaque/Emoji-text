@@ -1,9 +1,99 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Emoji Text Generator</title>
+    <title>Emojify</title>
+    <style>
+      body {
+        display: flex;
+        background-color: #242323;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .top-bar {
+        background-color: #333;
+        padding: 10px 0;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+
+      .top-bar a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+
+      h1 {
+        margin-top: 75px;
+        font-size: 48px; /* Increased font size for the heading */
+        color: #333;
+        background-image: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #8b00ff);
+        background-size: 600% 100%;
+        animation: rainbow-text 8s ease infinite;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      @keyframes rainbow-text {
+        0% {
+          background-position: 0% 50%;
+        }
+        100% {
+          background-position: 100% 50%;
+        }
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+      }
+
+      label {
+        margin-top: 20px; /* Increased margin for the labels */
+        color: #fff;
+        font-weight: bold;
+        font-size: 24px; /* Increased font size for the labels */
+      }
+
+      input[type="text"],
+      select {
+        width: 300px; /* Increased width for the input and select elements */
+        padding: 10px; /* Increased padding for the input and select elements */
+        font-size: 20px; /* Increased font size for the input and select elements */
+        color: #333;
+      }
+
+      button {
+        margin-top: 20px; /* Increased margin for the button */
+        padding: 15px 30px; /* Increased padding for the button */
+        font-size: 20px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #e01212;
+      }
+    </style>
   </head>
   <body>
+    <div class="top-bar">
+      <a href="https://www.instagram.com/rafayhaque/">Insta</a>
+      <a href="https://www.linkedin.com/in/rafay-haque-706054257/">Linkedin</a>
+      <a href="https://your-social-link3.com">Social Link 3</a>
+    </div>
     <h1>Emoji Text Generator</h1>
     <form action="/generate" method="post">
       <label for="word">Enter a word:</label>
@@ -18,7 +108,7 @@
         <!-- Add more emoji options as needed -->
       </select>
       <br>
-      <button type="submit">Generate Emoji Text</button>
+      <button type="submit">Generate</button>
     </form>
   </body>
 </html>
